@@ -1,0 +1,11 @@
+
+
+nav{
+   box-shadow:  var(--boxShadow);
+   border: 2px rgba(20, 33, 61, 0.20);
+   background-color: var(--backgroundColor);
+   color: var(--textColor);
+}
+li{
+   list-style-type: none;
+}
