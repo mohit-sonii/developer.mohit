@@ -3,26 +3,28 @@
 @tailwind utilities;
 
 
-*{
-   flex-wrap:wrap;
+* {
+   line-height: normal;
+   box-sizing: border-box;
+   flex-wrap: wrap;
 }
 
 :root {
    --primaryColor: #003366;
    --secondaryColor: #008080;
-   --accentColor: #ff6f61;
+   --accentColor: #f78378;
    --backgroundColor: #f4f4f9;
    --textColor: #2f4f4f;
-   --highlightColor: #ff7f50;
+   --highlightColor: #db6033;
    --boxShadow: 0px 0px 30px 0px rgba(20, 33, 61, 0.25)
 }
 
 [data-theme="dark"] {
    --primaryColor: #33587e;
    --secondaryColor: #006666;
-   --accentColor: #ff5a52;
+   --accentColor: #f78378;
    --backgroundColor: #1a1a1a;
    --textColor: #e0e0e0;
-   --highlightColor: #ff8a65;
+   --highlightColor: #db6033;
    --boxShadow: 0px 0px 30px 0px rgba(229, 229, 229, 0.25);
 }

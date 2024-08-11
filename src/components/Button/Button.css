@@ -1,5 +1,61 @@
-button {
+/* button {
    border-radius: 10px;
    color: var(--backgroundColor);
    font-weight: 700;
+   position: relative;
+   background-color: var(--accentColor);
+   transition: all 0.5s ease-in-out;
+   z-index: 1;
+}
+
+
+button::after{
+   content: '';
+   width: 0;
+   transition: all 0.4s ease-in-out;
+   background-color: var(--highlightColor);
+   position: absolute;
+   border-radius: 10px;
+   left: 0;
+   height:100%;
+}
+button:hover::after{
+   width: 100%;
+}
+
+button:hover{
+   color: var(--backgroundColor);
+} */
+
+button {
+   font-weight: 700;
+   background-color:  var(--accentColor);
+   border-radius: 0.4rem;
+   /* display: flex; */
+   position: relative;
+   overflow: hidden;
+   color: var(--backgroundColor);
+   transition: all 0.2s ease-in-out;
+   width: max-content;
+}
+
+button::after {
+   content: '';
+   height: 100%;
+   transition: width 0.5s ease-in-out;
+   border-radius: inherit;
+   width: 0;
+   background: var(--highlightColor);
+   position: absolute;
+   top: 0;
+   left: 0;
+}
+
+button:hover::after {
+   width: 100%;
+}
+
+button span {
+   position: relative;
+   z-index: 1;
 }
