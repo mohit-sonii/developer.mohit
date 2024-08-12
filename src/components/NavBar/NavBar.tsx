@@ -9,7 +9,7 @@ import "./NavBar.css"
 function NavBar() {
 
    return (
-      <nav className="rounded-b-2xl w-full flex justify-between items-center p-8 text-xl font-bold mb-3">
+      <nav className="rounded-b-2xl  m-auto p-8 flex justify-between items-center w-[90%] text-xl font-bold mb-3">
          <div>
             <p>Developer Mohit</p>
          </div>
@@ -25,7 +25,6 @@ function NavBar() {
                   About Me
                </li>
             </Link>
-
          </div>
       </nav>
    )

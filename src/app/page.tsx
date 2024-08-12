@@ -1,11 +1,12 @@
 
 import Hero from '@/components/Hero/Hero'
-import React from 'react'
+import WhoIAm from '@/components/WhoIam/WhoIAm'
 
 function page() {
    return (
       <>
          <Hero />
+         <WhoIAm/>
       </>
    )
 }

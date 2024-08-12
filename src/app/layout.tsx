@@ -3,7 +3,6 @@ import Footer from "@/components/Footer/page";
 import { Montserrat } from "next/font/google";
 import NavBar from "@/components/NavBar/NavBar";
 import "./globals.css";
-import ThemeSwitcher from "../../ThemeSwitcher";
 
 const inter = Montserrat({ subsets: ["latin"] });
 
@@ -21,10 +20,11 @@ export default function RootLayout({
       <html lang="en" style={{ fontSize: "62.5%" }}>
          <link rel="shortcut icon" href="/Avatar.png" type="image/x-icon" />
          <body className={inter.className} style={{ fontSize: "100%", backgroundColor: 'var(--backgroundColor)' }}>
-            <NavBar />
-            {/* <ThemeSwitcher /> */}
-            {children}
-            <Footer />
+            <div className="w-full flex gap-12 flex-col">
+               <NavBar />
+               {children}
+               <Footer />
+            </div>
          </body>
       </html>
    );
