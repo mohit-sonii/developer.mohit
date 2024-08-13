@@ -1,5 +1,5 @@
 
-button {
+.button {
    font-weight: 700;
    background-color:  var(--accentColor);
    border-radius: 0.4rem;
@@ -10,7 +10,7 @@ button {
    width: max-content;
 }
 
-button::after {
+.button::after {
    content: '';
    height: 100%;
    transition: width 0.5s ease-in-out;
@@ -22,11 +22,11 @@ button::after {
    left: 0;
 }
 
-button:hover::after {
+.button:hover::after {
    width: 100%;
 }
 
-button span {
+.button span {
    position: relative;
    z-index: 1;
 }

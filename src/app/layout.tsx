@@ -20,7 +20,7 @@ export default function RootLayout({
       <html lang="en" style={{ fontSize: "62.5%" }}>
          <link rel="shortcut icon" href="/Avatar.png" type="image/x-icon" />
          <body className={inter.className} style={{ fontSize: "100%", backgroundColor: 'var(--backgroundColor)' }}>
-            <div className="w-full flex gap-12 flex-col">
+            <div className="w-full flex gap-20 flex-col">
                <NavBar />
                {children}
                <Footer />

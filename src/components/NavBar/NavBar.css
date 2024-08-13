@@ -9,3 +9,8 @@ nav{
 li{
    list-style-type: none;
 }
+.InvisibleNavBar{
+   box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.25), 0px 0px 16px 1px rgba(0, 0, 0, 0.25);
+   background-color: var(--backgroundColor);
+   transition: all 0.5s ease-in-out;
+}

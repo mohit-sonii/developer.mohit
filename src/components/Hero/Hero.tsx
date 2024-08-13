@@ -3,7 +3,7 @@ import Button from "@/components/Button/Button"
 
 export default function Hero() {
    return (
-      <section className="my-6 min-h-max w-full flex justify-center items-center">
+      <section className="my-6 w-[90%] min-h-max flex justify-center m-auto items-center">
          <div className="flex flex-col py-10 gap-14 m-auto justify-center content-center">
             <div className="headings-subheadings font-bold flex flex-col gap-8 md:gap-10" >
                <p style={{ color: 'var(--primaryColor)' }} className=" text-7xl md:text-9xl">Namaste, I am <span style={{ color: 'var(--accentColor' }}>Mohit</span></p>

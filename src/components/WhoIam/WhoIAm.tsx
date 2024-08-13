@@ -14,9 +14,8 @@ export default function WhoIAm() {
             <Image
                src="/Avatar.png"
                alt="Avatar Image"
-               className="w-[350px] h-[350px] sm:w-[300px] sm:h-[300px]"
-               width={350}
-               height={350}
+               width={300}
+               height={300}
             />
          </div>
       </section>
