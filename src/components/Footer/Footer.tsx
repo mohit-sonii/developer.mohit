@@ -24,7 +24,7 @@ function Footer() {
                   <p style={{ color: 'var(--primaryColor)' }} className=" text-4xl md:text-5xl">Mohit Soni</p>
                   <p style={{ color: 'var(--textColor' }} className="text-xl md:text-2xl">A Full Stack Web Developer and Web Designer</p>
                </div>
-               <div className="buttons grid  grid-cols-2 gap-5  w-[70%]">
+               <div className="buttons grid grid-cols-2 gap-5  w-[90%] sm:w-[70%]">
                   <Button innerText="Instagram" href="https://instagram.com/developer.mohit" target="_blank" />
                   <Button innerText="GitHub" href="https://github.com/mohit-sonii" target="_blank" />
                   <Button innerText="LinkedIn" href="https://www.linkedin.com/in/mohit-soni-808984265/" target="_blank" />
