@@ -18,21 +18,21 @@ function NavBar() {
          <div>
             <p>Developer Mohit</p>
          </div>
-         <div className="flex gap-5 md:gap-7 relative items-center">
+         <main className="flex gap-5 md:gap-7 relative items-center">
             <div className="hidden md:flex gap-3 md:gap-7">
                <Link href={'/contact'}>
-                  <li >
+                  <p>
                      Contact
-                  </li>
+                  </p>
                </Link>
                <Link href={'/about-me'}>
-                  <li>
+                  <p>
                      About Me
-                  </li>
+                  </p>
                </Link>
             </div>
             <ThemeSwitcher />
-            <div className="flex md:hidden ">
+            <section className="flex md:hidden ">
                <button onClick={handleClick} className="transition-all ease-in-out duration-300">
                   {!isVisible && <Image
                      src="/Bars.svg"
@@ -47,23 +47,22 @@ function NavBar() {
                      height={15}
                   />}
                </button>
-            </div>
+            </section>
             {isVisible && (
                <div className="mt-5 InvisibleNavBar flex w-max p-5 flex-col gap-7 absolute top-full right-0  rounded-lg py-8">
                   <Link href={'/contact'}>
-                     <li >
+                     <p>
                         Contact
-                     </li>
+                     </p>
                   </Link>
                   <Link href={'/about-me'}>
-                     <li>
+                     <p>
                         About Me
-                     </li>
+                     </p>
                   </Link>
                </div>
             )}
-         </div>
-
+         </main>
       </nav>
    )
 }

@@ -4,20 +4,20 @@ import Image from "next/image"
 
 export default function WhoIAm() {
    return (
-      <section className="mb-5  w-[90%] py-10 grid grid-cols-1 md:grid-cols-2 m-auto justify-center items-center">
-         <div className="left flex flex-col items-start gap-8 md:gap-12">
+      <main className="mb-5  w-[90%] py-10 grid grid-cols-1 md:grid-cols-2 m-auto justify-center items-center">
+         <section className="left flex flex-col items-start gap-8 md:gap-12">
             <p style={{ color: 'var(--primaryColor' }} className="font-bold  text-5xl md:text-7xl">Who I Am?</p>
-            <p style={{ color: 'var(--textColor' }} className="font-medium text-xl md:text-3xl" >As a Bachelor of Computer Application student, I am passionate about coding and sharing my knowledge on social media. In addition to my coding skills, I excel in designing aesthetically pleasing websites and helping businesses achieve new heights through effective communication and interpersonal skill.</p>
+            <article style={{ color: 'var(--textColor' }} className="font-medium text-xl md:text-3xl" >As a Bachelor of Computer Application student, I am passionate about coding and sharing my knowledge on social media. In addition to my coding skills, I excel in designing aesthetically pleasing websites and helping businesses achieve new heights through effective communication and interpersonal skill.</article>
             <Button innerText="Contact" href="/contact" target="_self" />
-         </div>
-         <div className="right flex md:justify-end sm:justify-center">
+         </section>
+         <section className="right flex md:justify-end sm:justify-center">
             <Image
                src="/Avatar.png"
                alt="Avatar Image"
                width={300}
                height={300}
             />
-         </div>
-      </section>
+         </section>
+      </main>
    )
 }

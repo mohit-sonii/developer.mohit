@@ -6,7 +6,7 @@ function Button({ innerText, href,target }: { innerText: string, href: string,ta
    return (
       <Link href={href} target={target}>
          <button className="button py-5 text-center min-w-52 text-2xl">
-           <span>{innerText}</span>
+           <p>{innerText}</p>
          </button>
       </Link>
    )

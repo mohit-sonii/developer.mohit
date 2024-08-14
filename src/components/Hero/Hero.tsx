@@ -3,8 +3,8 @@ import Button from "@/components/Button/Button"
 
 export default function Hero() {
    return (
-      <section className="my-6 w-[90%] min-h-max flex justify-center m-auto items-center">
-         <div className="flex flex-col py-10 gap-14 m-auto justify-center content-center">
+      <main className="my-6 w-[90%] min-h-max flex justify-center m-auto items-center">
+         <section className="flex flex-col py-10 gap-14 m-auto justify-center content-center">
             <div className="headings-subheadings font-bold flex flex-col gap-8 md:gap-10" >
                <p style={{ color: 'var(--primaryColor)' }} className=" text-7xl md:text-9xl">Namaste, I am <span style={{ color: 'var(--accentColor' }}>Mohit</span></p>
                <p style={{ color: 'var(--textColor' }} className="text-4xl md:text-6xl md:w-3/5">A Full Stack Web Developer and Web Designer</p>
@@ -14,8 +14,8 @@ export default function Hero() {
                <Button innerText="GitHub" href="https://github.com/mohit-sonii" target="_blank" />
                <Button innerText="LinkedIn" href="https://www.linkedin.com/in/mohit-soni-808984265/" target="_blank" />
             </div>
-         </div>
-      </section>
+         </section>
+      </main>
    )
 }
 
