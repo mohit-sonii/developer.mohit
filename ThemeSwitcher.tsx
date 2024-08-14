@@ -3,6 +3,7 @@
 
 import { useState } from 'react';
 import { Switch } from '@/components/ui/switch';
+import { themeChanger } from '@/context/themeChanger';
 
 export default function ThemeSwitcher() {
    const [isDarkTheme, setIsDarkTheme] = useState(false);
@@ -10,6 +11,7 @@ export default function ThemeSwitcher() {
    const toggleTheme = () => {
       const newTheme = !isDarkTheme ? 'dark' : 'light';
       setIsDarkTheme(!isDarkTheme);
+      themeChanger()
       document.documentElement.setAttribute('data-theme', newTheme);
    };
 

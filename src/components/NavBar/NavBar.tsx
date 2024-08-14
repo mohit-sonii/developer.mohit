@@ -14,7 +14,7 @@ function NavBar() {
    }
 
    return (
-      <nav className="rounded-b-2xl  m-auto p-8 flex justify-between items-center w-full text-xl font-bold mb-3">
+      <nav className="rounded-b-2xl  navigation-header m-auto p-8 flex justify-between items-center w-full text-xl font-bold mb-3">
          <div>
             <p>Developer Mohit</p>
          </div>
