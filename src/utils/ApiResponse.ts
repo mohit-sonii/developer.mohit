@@ -4,16 +4,16 @@ import { NextResponse } from "next/server"
 type ResponseType = {
    success: boolean,
    message: string,
-   status: number
+   statusCode: number
 }
 
 
 export const ApiResponse = (
    success: boolean,
    message: string,
-   status: number
+   statusCode: number
 ) => {
-   const response: ResponseType = { success, message, status }
-   return NextResponse.json({...response})
+   const response: ResponseType = { success, message, statusCode }
+   return NextResponse.json({ ...response }, { status: statusCode })
 }
 
