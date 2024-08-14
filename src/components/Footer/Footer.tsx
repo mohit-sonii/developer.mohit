@@ -34,7 +34,7 @@ function Footer() {
       <footer className=" bg-slate-900 w-full h-max flex gap-12 justify-center items-center">
          <div className="flex flex-col my-12 p-5 gap-10 m-auto justify-center content-center">
             <div className="headings-subheadings font-bold flex flex-col gap-5" >
-               <p style={{ color: 'var(--backgroundColor)' }} className=" text-5xl md:text-6xl">Mohit Soni</p>
+               <p className="text-white text-5xl md:text-6xl">Mohit Soni</p>
             </div>
             <div className="flex gap-12 jusitfy-center items-center">
                <Icon dest="https://instagram.com/developer.mohit" source="/instagram.svg" alt="instagram icon" />
