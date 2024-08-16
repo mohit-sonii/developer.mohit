@@ -2,6 +2,7 @@
 "use client"
 import Image from "next/image"
 import Link from "next/link"
+import NavItem from "../NavItem"
 
 function Icon({ source, alt, dest }: { source: string, alt: string, dest: string }) {
    return (
@@ -15,15 +16,6 @@ function Icon({ source, alt, dest }: { source: string, alt: string, dest: string
                height={60}
             />
          </div>
-      </Link>
-   )
-}
-function NavItem({ dest, item }: { dest: string, item: string }) {
-   return (
-      <Link href={dest}>
-         <p className=" relative hover:translate-x-1 before:content-[''] before:absolute before:left-0 before:bottom-[-5px] before:rounded-lg before:h-[2px] before:w-0 hover:before:w-full before:bg-white before:transition-all before:duration-200 before:ease-in-out">
-            {item}
-         </p>
       </Link>
    )
 }

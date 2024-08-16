@@ -5,14 +5,15 @@ import ThemeSwitcher from "../../../ThemeSwitcher"
 import "./NavBar.css"
 import { useState } from "react"
 import Image from "next/image"
-
+import NavItem from "../NavItem"
 
 function NavBar() {
-   const [isVisible, setIsVisible] = useState(false)
+
+   const [isVisible, setIsVisible] = useState<boolean>(false)
    const handleClick = () => {
       setIsVisible(!isVisible)
    }
-
+   
    return (
       <nav className="rounded-b-2xl  navigation-header m-auto p-8 flex justify-between items-center w-full text-xl font-bold mb-3">
          <div>
@@ -20,19 +21,11 @@ function NavBar() {
          </div>
          <main className="flex gap-5 md:gap-7 relative items-center">
             <div className="hidden md:flex gap-3 md:gap-7">
-               <Link href={'/contact'}>
-                  <p>
-                     Contact
-                  </p>
-               </Link>
-               <Link href={'/about-me'}>
-                  <p>
-                     About Me
-                  </p>
-               </Link>
+               <NavItem dest="/contact" item="Contact" />
+               <NavItem dest="/" item="About Me" />
             </div>
             <ThemeSwitcher />
-            <section className="flex md:hidden ">
+            <section className="flex md:hidden">
                <button onClick={handleClick} className="transition-all ease-in-out duration-300">
                   {!isVisible && <Image
                      src="/Bars.svg"
@@ -55,7 +48,7 @@ function NavBar() {
                         Contact
                      </p>
                   </Link>
-                  <Link href={'/about-me'}>
+                  <Link href={'/'}>
                      <p>
                         About Me
                      </p>
@@ -63,7 +56,7 @@ function NavBar() {
                </div>
             )}
          </main>
-      </nav>
+      </nav >
    )
 }
 
