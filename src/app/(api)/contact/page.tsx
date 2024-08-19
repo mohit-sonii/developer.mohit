@@ -1,15 +1,16 @@
-import type { Metadata } from 'next'
+
+import { Metadata } from 'next'
 import React from 'react'
+import Contact from './contact'
 
 export const metadata: Metadata = {
    title: 'developer.mohit | Contact',
    description: 'Contact'
 }
 
-function Contact() {
-   return (
-      <div>Contact</div>
-   )
+
+function page() {
+   return <Contact />
 }
 
-export default Contact
+export default page

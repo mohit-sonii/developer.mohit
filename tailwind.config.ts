@@ -35,6 +35,9 @@ const config = {
          },
       },
       extend: {
+         borderWidth: {
+            '1': '1px'
+         },
          keyframes: {
             "accordion-down": {
                from: { height: "0" },

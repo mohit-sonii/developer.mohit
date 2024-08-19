@@ -3,6 +3,8 @@ import Footer from "@/components/Footer/Footer";
 import { Montserrat } from "next/font/google";
 import NavBar from "@/components/NavBar/NavBar";
 import "./globals.css";
+import { Toaster } from 'react-hot-toast';
+
 
 const inter = Montserrat({ subsets: ["latin"] });
 
@@ -21,6 +23,7 @@ export default function RootLayout({
          <link rel="shortcut icon" href="/Avatar.png" type="image/x-icon" />
          <body className={inter.className} style={{ fontSize: "100%", backgroundColor: 'var(--backgroundColor)' }}>
             <div className="w-full flex gap-20 flex-col">
+               <Toaster />
                <NavBar />
                {children}
                <Footer />
