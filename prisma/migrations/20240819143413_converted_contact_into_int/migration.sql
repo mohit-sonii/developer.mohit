@@ -3,7 +3,7 @@ CREATE TABLE "contactform" (
     "id" TEXT NOT NULL,
     "name" TEXT NOT NULL,
     "email" TEXT NOT NULL,
-    "contact" TEXT NOT NULL,
+    "contact" INTEGER NOT NULL,
     "servicetype" TEXT NOT NULL,
     "submittedon" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
 
