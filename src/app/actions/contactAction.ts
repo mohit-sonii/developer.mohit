@@ -3,34 +3,35 @@ import prisma from "@/lib/db"
 import { ApiResponse } from "@/utils/ApiResponse"
 import { contactFormSchema } from "@/schema/contactFormSchema"
 
-export async function contactForm(formData: FormData) {
 
-   const email = formData.get('email') as string
-   const name = formData.get('sender') as string
-   const contact = formData.get('contact') as string
-   const serviceType = formData.get('serviceType') as string
+interface formDataInterface {
+   email: string,
+   name: string,
+   contact: Number,
+   serviceType: string
+}
 
-   const formObject = {
-      name: name,
-      email: email,
-      contact: contact,
-      servicetype: serviceType
-   }
+export async function contactForm(formData: formDataInterface) {
 
-   const validation = contactFormSchema.safeParse(formObject)
+
+   const { name, email, contact, serviceType } = formData
+
+   const validation = contactFormSchema.safeParse({ name, email, contact, serviceType })
    if (!validation.success) return ApiResponse(false, validation.error.message, 400)
 
    try {
       const alreadySubmitted = await prisma.contactform.findFirst({
          where: {
             OR: [
-               { email: email },
-               { name: name }
+               { email },
+               { name },
+               { contact }
             ]
          },
          select: {
             email: true,
-            name: true
+            name: true,
+            contact: true
          }
       })
 
@@ -38,9 +39,9 @@ export async function contactForm(formData: FormData) {
 
       await prisma.contactform.create({
          data: {
-            name: name,
-            email: email,
-            contact: contact,
+            name,
+            email,
+            contact,
             servicetype: serviceType
          }
       })

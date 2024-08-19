@@ -22,7 +22,7 @@ import {
    FormLabel,
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
-
+import { contactForm } from '@/app/actions/contactAction'
 
 
 function Contact() {
@@ -32,33 +32,41 @@ function Contact() {
       defaultValues: {
          name: '',
          email: '',
-         contact: '',
+         contact: 0,
          serviceType: ''
       }
    })
 
    const { handleSubmit, formState: { errors } } = form
-   if (Object.keys(errors).length > 0) {
-      console.log(errors, 'this is errros')
-      for (const key in errors) {
-         console.log(key, 'this is key')
-         if (errors.hasOwnProperty(key)) {
-            const errorKey = key as keyof typeof errors;
-            console.log(errorKey, 'this is error key')
-            toast.error(errors[errorKey]?.message || "An error occurred");
-         }
-      }
-   }
 
-   const onSubmit = (data: z.infer<typeof contactFormSchema>) => {
-      console.log(data)
+   const onSubmit = async (data: z.infer<typeof contactFormSchema>) => {
+      if (Object.keys(errors).length > 0) {
+         for (const key in errors) {
+            if (errors.hasOwnProperty(key)) {
+               const errorKey = key as keyof typeof errors;
+               toast.error(errors[errorKey]?.message || "An error occurred");
+            }
+         }
+         return
+      }
+      try {
+         const response = await contactForm(data)
+         if (!response.success) {
+            toast.error(response.message || "An error occurred")
+         } else {
+            toast.success("Form submitted successfully!")
+         }
+      } catch (error: any) {
+         toast.error("An error occurred while submitting the form")
+      }
+
    }
 
    return (
       <main className="my-6 w-[90%] min-h-max flex  m-auto  items-center">
          <section className="flex flex-col py-10 gap-14   content-center">
             <div className="headings-subheadings font-bold flex  flex-col gap-8 md:gap-10" >
-               <p style={{ color: 'var(--primaryColor)' }} className=" text-7xl md:text-8xl">Have a Project?</p>
+               <p style={{ color: 'var(--primaryColor)' }} className="text-8xl">Have a Project?</p>
                <p style={{ color: 'var(--textColor)' }} className="text-4xl md:text-5xl md:w-3/5">Don&prime;t worry we can assist you with this. Just let us know</p>
             </div>
             <div className="buttons flex  gap-5 md:gap-20 h-auto">
@@ -96,7 +104,7 @@ function Contact() {
                               <FormItem>
                                  <FormLabel>Contact</FormLabel>
                                  <FormControl>
-                                    <Input placeholder="+12 142 2145 745" {...field} />
+                                    <Input type ="number" placeholder="+12 142 2145 745" {...field} />
                                  </FormControl>
                               </FormItem>
                            )}
