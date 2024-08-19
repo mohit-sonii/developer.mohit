@@ -7,13 +7,12 @@ import { contactFormSchema } from "@/schema/contactFormSchema"
 interface formDataInterface {
    email: string,
    name: string,
-   contact: Number,
+   contact: number,
    serviceType: string
 }
 
 export async function contactForm(formData: formDataInterface) {
-
-
+   
    const { name, email, contact, serviceType } = formData
 
    const validation = contactFormSchema.safeParse({ name, email, contact, serviceType })
