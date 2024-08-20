@@ -3,7 +3,7 @@ import "./Button.css"
 
 interface ButtonProps {
    innerText: string,
-   href: string | '',
+   href?: string | '',
    target?: string | '',
    typeOfButton?: "submit" | "button",
 }
@@ -18,7 +18,7 @@ function Button({ innerText, href, target, typeOfButton }: ButtonProps) {
          </Link>
       )
    }
-
+   
    return (
       <button className="button py-5 text-center min-w-52 text-2xl" type={typeOfButton}>
          <p>{innerText}</p>

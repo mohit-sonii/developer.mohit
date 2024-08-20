@@ -117,7 +117,7 @@ const SelectItem = React.forwardRef<
       className={cn(
          "relative font-semibold flex w-full cursor-default select-none items-center rounded-sm p-5 text-lg outline-none focus:bg-slate-100 focus:text-slate-900 data-[disabled]:pointer-events-none data-[disabled]:opacity-50 dark:focus:bg-slate-800 dark:focus:text-slate-50 ",
          className
-      )}
+      )} 
       {...props}
    >
       <span className="absolute left-2 flex h-3.5 w-3.5 items-center justify-center">
