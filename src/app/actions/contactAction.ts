@@ -14,7 +14,6 @@ interface formDataInterface {
 export async function contactForm(formData: formDataInterface) {
    
    const { name, email, contact, serviceType } = formData
-
    const validation = contactFormSchema.safeParse({ name, email, contact, serviceType })
    if (!validation.success) return ApiResponse(false, validation.error.message, 400)
 

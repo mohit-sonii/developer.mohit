@@ -26,13 +26,12 @@ import { contactForm } from '@/app/actions/contactAction'
 
 
 function Contact() {
-   console.log('rendering')
    const form = useForm<z.infer<typeof contactFormSchema>>({
       resolver: zodResolver(contactFormSchema),
       defaultValues: {
          name: '',
          email: '',
-         contact: 0,
+         contact: Number.MAX_SAFE_INTEGER,
          serviceType: ''
       }
    })
@@ -104,7 +103,7 @@ function Contact() {
                               <FormItem>
                                  <FormLabel>Contact</FormLabel>
                                  <FormControl>
-                                    <Input type ="number" placeholder="+12 142 2145 745" {...field} />
+                                    <Input placeholder="+12 142 2145 745" {...field} />
                                  </FormControl>
                               </FormItem>
                            )}
