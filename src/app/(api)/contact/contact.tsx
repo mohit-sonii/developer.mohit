@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState } from 'react'
+import React, { useState, useEffect, memo } from 'react'
 import { z } from 'zod'
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
@@ -24,31 +24,21 @@ import {
 import { Input } from "@/components/ui/input"
 import { contactForm } from '@/app/actions/contactAction'
 
-
-function Contact() {
+const Contact: React.FC = memo(() => {
    const [loading, setLoading] = useState<boolean>(false)
+   console.log('rendering..')
    const form = useForm<z.infer<typeof contactFormSchema>>({
       resolver: zodResolver(contactFormSchema),
       defaultValues: {
          name: '',
          email: '',
-         contact: 0,
+         contact: undefined,
          serviceType: ''
       },
       mode: 'onSubmit'
    })
 
-   const { handleSubmit,reset, formState: { errors } } = form
-
-   if (Object.keys(errors).length > 0) {
-      setLoading(false)
-      for (const key in errors) {
-         if (errors.hasOwnProperty(key)) {
-            const errorKey = key as keyof typeof errors;
-            toast.error(errors[errorKey]?.message || "An error occurred");
-         }
-      }
-   }
+   const { handleSubmit, reset, formState: { errors } } = form
 
    const onSubmit = async (data: z.infer<typeof contactFormSchema>) => {
       setLoading(true)
@@ -60,16 +50,27 @@ function Contact() {
             toast.success("Thanks for the Submission!")
          }
          reset()
-         setLoading(false)
       } catch (error: any) {
          toast.error("An error occurred while submitting the form")
+      } finally {
+         setLoading(false)
       }
    }
+   useEffect(() => {
+      if (Object.keys(errors).length > 0) {
+         for (const key in errors) {
+            if (errors.hasOwnProperty(key)) {
+               const errorKey = key as keyof typeof errors;
+               toast.error(errors[errorKey]?.message || "An error occurred");
+            }
+         }
+      }
+   }, [errors])
 
    return (
-      <div className="buttons flex  gap-5 md:gap-20 h-auto">
-         <Form {...form} >
-            <form onSubmit={handleSubmit(onSubmit)} className="flex gap-10  flex-col">
+      <div className="buttons flex gap-5 md:gap-20 h-auto">
+         <Form {...form}>
+            <form onSubmit={handleSubmit(onSubmit)} className="flex gap-10 flex-col">
                <div className="items-start md:items-center flex-col sm:flex-row gap-10 md:gap-20 flex">
                   <FormField
                      control={form.control}
@@ -102,7 +103,14 @@ function Contact() {
                         <FormItem>
                            <FormLabel>Contact</FormLabel>
                            <FormControl>
-                              <Input maxLength={15} type="number" placeholder="+12 142 2145 745" {...field} onChange={(e) => field.onChange(e.target.value === '' ? undefined : parseInt(e.target.value))}
+                              <Input
+                                 type="number"
+                                 placeholder="+12 142 2145 745"
+                                 {...field}
+                                 value={field.value ?? ''}
+                                 onChange={(e) =>
+                                    field.onChange(e.target.value === '' ? '' : parseInt(e.target.value))
+                                 }
                               />
                            </FormControl>
                         </FormItem>
@@ -121,7 +129,7 @@ function Contact() {
                               <SelectTrigger className="w-[180px]">
                                  <SelectValue placeholder="Type of Service" />
                               </SelectTrigger>
-                              <SelectContent >
+                              <SelectContent>
                                  <SelectItem value="webdevelopment">Web Development</SelectItem>
                                  <SelectItem value="uiux">UI/UX</SelectItem>
                                  <SelectItem value="appdevelopment">App Development</SelectItem>
@@ -136,8 +144,7 @@ function Contact() {
             </form>
          </Form>
       </div>
-
    )
-}
+})
 
 export default Contact
