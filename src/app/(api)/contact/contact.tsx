@@ -106,6 +106,7 @@ const Contact: React.FC = () => {
                                  type="number"
                                  placeholder="+12 142 2145 745"
                                  {...field}
+                                 maxLength={15}
                                  value={field.value ?? ''}
                                  onChange={(e) =>
                                     field.onChange(e.target.value === '' ? '' : parseInt(e.target.value))

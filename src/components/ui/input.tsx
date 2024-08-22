@@ -11,7 +11,6 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
          <input
             required
             type={type}
-            maxLength={15}
             className="rounded-md outline-none p-5 border-1 border-[var(--accentColor)] text-[var(--textColor)] focus:border-[var(--textColor)] font-medium bg-[var(--backgroundColor)] text-lg"
             ref={ref}
             {...props}
