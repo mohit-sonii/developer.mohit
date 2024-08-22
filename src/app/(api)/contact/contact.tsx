@@ -26,7 +26,6 @@ import { contactForm } from '@/app/actions/contactAction'
 
 const Contact: React.FC = memo(() => {
    const [loading, setLoading] = useState<boolean>(false)
-   console.log('rendering..')
    const form = useForm<z.infer<typeof contactFormSchema>>({
       resolver: zodResolver(contactFormSchema),
       defaultValues: {

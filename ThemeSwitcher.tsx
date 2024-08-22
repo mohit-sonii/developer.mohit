@@ -1,26 +1,25 @@
 
 "use client"
 
-import { useState } from 'react';
 import { Switch } from '@/components/ui/switch';
-import { themeChanger } from '@/context/themeChanger';
+import { useDispatch, useSelector } from 'react-redux';
+import { RootState } from '@/redux/store';
+import { setTheme } from '@/redux/themeSlice';
 
 export default function ThemeSwitcher() {
-   const [isDarkTheme, setIsDarkTheme] = useState(false);
+   const theme = useSelector((state: RootState) => state.theme)
+   const dispatch = useDispatch()
 
    const toggleTheme = () => {
-      const newTheme = !isDarkTheme ? 'dark' : 'light';
-      setIsDarkTheme(!isDarkTheme);
-      themeChanger()
-      document.documentElement.setAttribute('data-theme', newTheme);
+      dispatch(setTheme(theme === 'light' ? 'dark' : 'light'))
    };
+   document.documentElement.setAttribute('data-theme', theme);
 
    return (
       <div className="flex items-center justify-center" style={{ gap: '5px' }}>
-         {/* <p>{isDarkTheme ? 'Dark' : 'Light'}</p> */}
          <div>
             <Switch
-               checked={isDarkTheme}
+               checked={theme === 'light' ? false : true}
                onCheckedChange={toggleTheme}
             />
          </div>
