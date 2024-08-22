@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState, useEffect, memo } from 'react'
+import React, { useState, useEffect } from 'react'
 import { z } from 'zod'
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
@@ -145,4 +145,4 @@ const Contact: React.FC = () => {
       </div>
    )
 }
-export default memo(Contact)
+export default Contact

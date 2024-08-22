@@ -5,6 +5,7 @@ import { Switch } from '@/components/ui/switch';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '@/redux/store';
 import { setTheme } from '@/redux/themeSlice';
+import { useEffect } from 'react';
 
 export default function ThemeSwitcher() {
    const theme = useSelector((state: RootState) => state.theme)
@@ -13,7 +14,9 @@ export default function ThemeSwitcher() {
    const toggleTheme = () => {
       dispatch(setTheme(theme === 'light' ? 'dark' : 'light'))
    };
-   document.documentElement.setAttribute('data-theme', theme);
+   useEffect(() => {
+      document.documentElement.setAttribute('data-theme', theme);
+   }, [theme])
 
    return (
       <div className="flex items-center justify-center" style={{ gap: '5px' }}>
