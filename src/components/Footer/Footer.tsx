@@ -8,6 +8,7 @@ function Icon({ source, alt, dest }: { source: string, alt: string, dest: string
    return (
       <Link href={dest} target="_blank">
          <div className="rounded-full w-12 h-12 p-2 bg-gray-700 hover:-translate-y-1 hover:scale-150  transition-all ease-in duration-200 ">
+            
             <Image
                src={source}
                alt={alt}
