@@ -24,7 +24,7 @@ import {
 import { Input } from "@/components/ui/input"
 import { contactForm } from '@/app/actions/contactAction'
 
-const Contact: React.FC = () => {
+export const Contact: React.FC = () => {
    const [loading, setLoading] = useState<boolean>(false)
    const form = useForm<z.infer<typeof contactFormSchema>>({
       resolver: zodResolver(contactFormSchema),
@@ -146,4 +146,3 @@ const Contact: React.FC = () => {
       </div>
    )
 }
-export default Contact
