@@ -5,7 +5,7 @@ import Contact from './Contact'
 
 export const metadata: Metadata = {
    title: 'developer.mohit | Contact',
-   description: 'Contact'
+   description: 'Contact Us'
 }
 
 

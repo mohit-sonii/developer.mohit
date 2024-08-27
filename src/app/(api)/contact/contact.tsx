@@ -126,7 +126,7 @@ const Contact: React.FC = () => {
                               onValueChange={field.onChange}
                               value={field.value}
                            >
-                              <SelectTrigger className="w-[180px]">
+                              <SelectTrigger className="w-[200px]">
                                  <SelectValue placeholder="Type of Service" />
                               </SelectTrigger>
                               <SelectContent>
