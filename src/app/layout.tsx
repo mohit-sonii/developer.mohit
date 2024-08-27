@@ -23,14 +23,14 @@ export default function RootLayout({
    return (
       <html lang="en" style={{ fontSize: "62.5%" }}>
          <link rel="shortcut icon" href="/Avatar.png" type="image/x-icon" />
-         <body className={clsx(inter.className, 'bg-dot-white/[0.2]','bg-dot-black/[0.2] bg-[var(--backgroundColor)]  text-full transition-all ease-in duration-400 relative')}>
-            <div className={`w-full flex gap-20 flex-col `}>
+         <body className={clsx(inter.className, 'bg-dot-white/[0.2]', 'bg-dot-black/[0.2] bg-[var(--backgroundColor)]  text-full transition-all ease-in duration-400 relative')}>
+            <div className='w-full flex gap-20 flex-col'>
                <Toaster />
                <ClientProvider>
                   <NavBar />
                   {children}
-                  <Footer />
                </ClientProvider>
+               <Footer />
             </div>
          </body>
       </html>

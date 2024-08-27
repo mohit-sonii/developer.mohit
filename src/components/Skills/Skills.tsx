@@ -12,6 +12,10 @@ const infos = [
       name: 'Next.js'
    },
    {
+      image:'/aws.svg',
+      name:'AWS'
+   },
+   {
       image: '/Bootstrap.svg',
       name: 'Bootstrap'
    },
@@ -77,7 +81,7 @@ function Skills() {
    return (
       <>
          <section className="w-full flex-col py-10 sm:w-full m-auto flex justify-center items-center gap-8 md:gap-12">
-            <p style={{ color: 'var(--primaryColor' }} className='font-bold text-5xl md:text-7xl'>My Skills</p>
+            <h1 style={{ color: 'var(--primaryColor' }} className='font-bold text-5xl md:text-7xl'>My Skills</h1>
             <article style={{ color: 'var(--textColor)' }} className='text-center text-xl md:text-3xl font-medium w-[90%]'>Success is the result of perfection, hard work, learning from failure, loyalty, and persistence.<strong> – Colin Powell </strong></article>
             <InfiniteMovingCards speed='normal' direction='right' items={infos} pauseOnHover={false} />
             <InfiniteMovingCards speed='normal' direction='left' items={shuffledArray} pauseOnHover={false} />

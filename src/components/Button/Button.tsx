@@ -12,7 +12,7 @@ function Button({ innerText, href, target, typeOfButton }: ButtonProps) {
       return (
 
          <Link href={href} target={target}>
-            <button className="button py-5 text-center min-w-52 text-2xl" type={typeOfButton}>
+            <button className="button py-5 bg-[var(--accentColor)] text-[var(--backgroundColor)] text-center min-w-52 text-2xl" type={typeOfButton}>
                <p>{innerText}</p>
             </button>
          </Link>

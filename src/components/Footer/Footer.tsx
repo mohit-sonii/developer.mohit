@@ -37,8 +37,9 @@ function Footer() {
             <nav className="flex gap-8 font-bold text-xl" style={{ color: 'var(--backgroundColor' }}>
                <NavItem dest="/contact" item="Contact" />
                <NavItem dest="/" item="About Me" />
+               <NavItem dest="/learn" item="Learn" />
             </nav>
-         </main>
+         </main> 
       </footer>
    )
 }

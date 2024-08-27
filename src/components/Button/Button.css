@@ -1,11 +1,9 @@
 
 .button {
    font-weight: 700;
-   background-color:  var(--accentColor);
    border-radius: 0.4rem;
    position: relative;
    overflow: hidden;
-   color: var(--backgroundColor);
    transition: all 0.2s ease-in-out;
    width: max-content;
 }

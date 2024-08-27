@@ -14,7 +14,7 @@ function NavBar() {
    }
 
    return (
-      <nav className="rounded-b-2xl navigation-header m-auto p-8 flex justify-between items-center w-full text-xl font-bold mb-3">
+      <nav className="rounded-b-2xl z-[20] navigation-header m-auto p-8 flex justify-between items-center w-full text-xl font-bold mb-3 ">
          <div>
             <p>Developer Mohit</p>
          </div>
@@ -22,6 +22,7 @@ function NavBar() {
             <div className="hidden md:flex gap-3 md:gap-7">
                <NavItem dest="/contact" item="Contact"/>
                <NavItem dest="/" item="About Me" />
+               <NavItem dest="/learn" item="Learn" />
             </div>
             <ThemeSwitcher />
             <section className="flex md:hidden">
@@ -44,6 +45,7 @@ function NavBar() {
                <div className="mt-5 InvisibleNavBar flex w-max p-5 flex-col gap-7 absolute top-full right-0  rounded-lg py-8">
                   <NavItem dest="/contact" item="Contact" />
                   <NavItem dest="/" item="About Me" />
+                  <NavItem dest="/learn" item="Learn" />
                </div>
             )}
          </main>
