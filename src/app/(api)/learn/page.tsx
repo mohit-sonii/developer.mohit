@@ -13,11 +13,11 @@ function page() {
    return (
       <main className='m-auto my-20 justify-center items-center flex w-[90%] gap-24 '>
          <section className=' w-[90%] flex m-auto justify-center items-center gap-7 text-center'>
-            <h1 className="text-[var(--textColor)] text-4xl lg:text-8xl font-bold">What you be learning today ?</h1>
+            <h1 className="text-[var(--textColor)] text-6xl lg:text-8xl font-bold">What you be learning today ?</h1>
             <h5 className="w-full sm:w-[80%] m-auto justify-center items-center text-[var(--textColor)] text-xl lg:text-3xl font-normal">Maybe Programming Language, Maybe a database or maybe for interview. Well I didn&acute;t gave any yet, hahahhaha!!!</h5>
             <BackgroundBeams />
          </section>
-         <section className=' w-[90%] flex m-auto justify-center items-center gap-8 text-center'>
+         <section className=' w-[90%] flex m-auto justify-center gap-8 '>
             <ButtonForLearn innerText='HTML' image='/html.svg' path='/' />
             <ButtonForLearn innerText='CSS' image='/css.svg' path='/' />
             <ButtonForLearn innerText='JavaScript' image='/js.svg' path='/' />
