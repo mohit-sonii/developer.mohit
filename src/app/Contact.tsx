@@ -5,7 +5,6 @@ import { z } from 'zod'
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import toast from 'react-hot-toast';
-import Button from '@/components/Button/Button'
 import {
    Select,
    SelectContent,
@@ -23,6 +22,7 @@ import {
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import { contactForm } from '@/app/actions/contactAction'
+import Button from '@/components/Button/Button'
 
 const Contact: React.FC = () => {
    const [loading, setLoading] = useState<boolean>(false)

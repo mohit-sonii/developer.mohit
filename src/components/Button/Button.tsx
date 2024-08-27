@@ -20,7 +20,7 @@ function Button({ innerText, href, target, typeOfButton }: ButtonProps) {
    }
    
    return (
-      <button className="button py-5 text-center min-w-52 text-2xl" type={typeOfButton}>
+      <button className="button py-5 text-center bg-[var(--accentColor)] text-[var(--backgroundColor)] min-w-52 text-2xl" type={typeOfButton}>
          <p>{innerText}</p>
       </button>
    )
