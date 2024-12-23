@@ -15,20 +15,20 @@ function CurrentlyLearning() {
    return (
       <section className='w-[90%]  flex-col py-10 sm:w-full m-auto flex justify-center items-center gap-8 md:gap-12'>
          <h1 style={{ color: 'var(--primaryColor' }} className='font-bold text-5xl md:text-7xl'>Currently Learning</h1>
-         <article style={{ color: 'var(--textColor)' }} className='text-center text-xl sm:w-[70%] md:text-3xl font-medium'><strong>Amazon Web Services &#10088; AWS &#10089;</strong> is a comprehensive cloud computing platform provided by Amazon. It offers a wide range of services, including computing power, storage, databases, machine learning, and analytics, all accessible over the internet. AWS allows businesses to scale resources up or down based on demand, reducing the need for on-premises infrastructure. It&acute;s widely used for hosting applications, storing data, and running various workloads in a secure and reliable manner.</article>
+         <article style={{ color: 'var(--textColor)' }} className='text-center text-xl sm:w-[70%] md:text-3xl font-medium'><strong>Python</strong> is a versatile, high-level programming language known for its simplicity and readability. It supports multiple programming paradigms, including procedural, object-oriented, and functional programming. With an extensive standard library and numerous third-party packages, Python is widely used for web development, data analysis, machine learning, automation, and more. Its beginner-friendly syntax makes it an ideal choice for both new and experienced developers.</article>
 
          <TooltipProvider>
             <Tooltip>
                <TooltipTrigger asChild>
                   <Image
-                     src="/aws.svg"
-                     alt="Amaxon Web Service"
+                     src="/python.svg"
+                     alt="Python Full Stack Development"
                      width={100}
                      height={100}
                   />
                </TooltipTrigger>
                <TooltipContent>
-                  <p>Amazon Web Service (AWS)</p>
+                  <p>Python</p>
                </TooltipContent>
             </Tooltip>
          </TooltipProvider>

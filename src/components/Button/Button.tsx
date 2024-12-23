@@ -10,13 +10,12 @@ interface ButtonProps {
 function Button({ innerText, href, target, typeOfButton }: ButtonProps) {
    if (href) {
       return (
-
          <Link href={href} target={target}>
             <button className="button py-5 bg-[var(--accentColor)] text-[var(--backgroundColor)] text-center min-w-52 text-2xl" type={typeOfButton}>
                <p>{innerText}</p>
             </button>
          </Link>
-      )
+      ) 
    }
    
    return (
