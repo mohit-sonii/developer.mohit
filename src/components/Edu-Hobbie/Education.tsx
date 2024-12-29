@@ -10,7 +10,7 @@ export default function Education() {
          </section>
          <section className="flex flex-col w-full  items-start md:items-end gap-8 md:gap-12 justify-normal">
             <h1 style={{ color: 'var(--primaryColor' }} className="font-bold  text-5xl md:text-7xl">Hobbies</h1>
-            <p style={{ color: 'var(--textColor' }} className="font-medium text-xl md:text-3xl italic" >Badminton, Chess, Listening to music</p>
+            <p style={{ color: 'var(--textColor' }} className="font-medium text-xl md:text-3xl italic" >Badminton, Cooking, Chess, Listening to music</p>
          </section>
       </main>
    )
