@@ -1,4 +1,4 @@
-import Button from "../Button/ButtonWithRedirect";
+import ButtonWithRedirect from "../Button/ButtonWithRedirect";
 import Image from "next/image";
 
 export default function WhoIAm() {
@@ -21,7 +21,11 @@ export default function WhoIAm() {
           and helping businesses achieve new heights through effective
           communication and interpersonal skill.
         </article>
-        <Button innerText="Contact" href="/contact" target="_self" />
+        <ButtonWithRedirect
+          innerText="Contact"
+          href="/contact"
+          target="_self"
+        />
       </section>
       <section className="right flex md:justify-end sm:justify-center">
         <Image src="/Avatar.png" alt="Avatar Image" width={300} height={300} />
