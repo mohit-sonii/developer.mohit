@@ -1,5 +1,5 @@
 
-import Contact from '@/app/Contact'
+import Contact from '@/components/contact/Contact'
 import { Metadata } from 'next'
 import React from 'react'
 

@@ -8,25 +8,38 @@
    box-sizing: border-box;
    flex-wrap: wrap;
 }
-
 :root {
-   --primaryColor: #003366;
-   --secondaryColor: #008080;
-   --accentColor: #f78378;
-   --backgroundColor: #f4f4f9;
-   --textColor: #2f4f4f;
-   --highlightColor: #db6033;
-   --boxShadow: 0px 0px 30px 0px rgba(20, 33, 61, 0.25)
+   --primaryColor: #00509e;
+   /* Deep blue for buttons and accents */
+   --secondaryColor: #006d77;
+   /* Teal for secondary elements */
+   --accentColor: #ffb703;
+   /* Bright gold for highlights */
+   --backgroundColor: #ffffff;
+   /* White background for light theme */
+   --textColor: #1e293b;
+   /* Slate blue for text */
+   --highlightColor: #d90429;
+   /* Red for hover effects */
+   --boxShadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+   /* Soft shadow */
 }
 
 [data-theme="dark"] {
-   --primaryColor: #33587e;
-   --secondaryColor: #006666;
-   --accentColor: #f78378;
-   --backgroundColor: #1a1a1a;
-   --textColor: #e0e0e0;
-   --highlightColor: #db6033;
-   --boxShadow: 0px 0px 30px 0px rgba(229, 229, 229, 0.25);
+   --primaryColor: #1d3557;
+   /* Dark navy blue for buttons and accents */
+   --secondaryColor: #457b9d;
+   /* Cool teal for secondary elements */
+   --accentColor: #f4a261;
+   /* Warm orange for highlights */
+   --backgroundColor: #121212;
+   /* Near black background for dark theme */
+   --textColor: #f1faee;
+   /* Off-white for text */
+   --highlightColor: #e63946;
+   /* Bright red for hover effects */
+   --boxShadow: 0px 4px 6px rgba(255, 255, 255, 0.1);
+   /* Light shadow for dark theme */
 }
 
 input[type=number]::-webkit-inner-spin-button,

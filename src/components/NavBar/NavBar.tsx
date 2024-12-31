@@ -21,7 +21,7 @@ function NavBar() {
          <main className="flex gap-5 md:gap-7 relative items-center">
             <div className="hidden md:flex gap-3 md:gap-7">
                <NavItem dest="/contact" item="Contact"/>
-               <NavItem dest="/" item="About Me" />
+               <NavItem dest="/about-me" item="About Me" />
                <NavItem dest="/learn" item="Learn" />
             </div>
             <ThemeSwitcher />
@@ -44,7 +44,7 @@ function NavBar() {
             {isVisible && (
                <div className="mt-5 InvisibleNavBar flex w-max p-5 flex-col gap-7 absolute top-full right-0  rounded-lg py-8">
                   <NavItem dest="/contact" item="Contact" />
-                  <NavItem dest="/" item="About Me" />
+                  <NavItem dest="/about-me" item="About Me" />
                   <NavItem dest="/learn" item="Learn" />
                </div>
             )}
