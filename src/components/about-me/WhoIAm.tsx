@@ -9,7 +9,7 @@ export default function WhoIAm() {
           style={{ color: "var(--primaryColor" }}
           className="font-bold  text-5xl md:text-7xl"
         >
-          Who I Am?
+          Who I Am? 
         </h1>
         <article
           style={{ color: "var(--textColor" }}
