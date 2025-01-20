@@ -2,7 +2,7 @@ export const InputField = ({
   register,
   nameForRegister,
   label_text,
-  classnames,
+  classnames="",
 }: {
   register: any;
   nameForRegister: string;
@@ -33,7 +33,7 @@ export const SelectField = ({
   register,
   nameForRegister,
   label,
-  classnames,
+  classnames="",
 }: {
   register: any;
   classnames?: string;

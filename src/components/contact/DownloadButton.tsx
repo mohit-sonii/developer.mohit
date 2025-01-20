@@ -4,9 +4,10 @@ export const DownloadButton = () => {
 
    const handleDownload = () => {
       const pathURL =
-         "https://drive.google.com/file/d/16Y6iFyPA-_j7AwuEUfPdX4ITJiRIsVst/view?usp=drive_link"
+         "https://drive.google.com/uc?export=download&id=16Y6iFyPA-_j7AwuEUfPdX4ITJiRIsVst"
       const elementCreation = document.createElement("a")
       elementCreation.href = pathURL
+      elementCreation.download="mohit_soni_resume_masked.pdf"
       document.body.appendChild(elementCreation)
       elementCreation.click()
       document.body.removeChild(elementCreation)

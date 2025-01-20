@@ -60,7 +60,7 @@ const Contact: React.FC = () => {
         onSubmit={handleSubmitRequest}
         className="w-full flex flex-col gap-10"
       >
-        <div className="flex-wrap w-full flex items-center justify-between">
+        <div className="flex-wrap w-full flex-row flex items-center justify-between gap-10">
           <InputField
             register={register}
             nameForRegister="name"
