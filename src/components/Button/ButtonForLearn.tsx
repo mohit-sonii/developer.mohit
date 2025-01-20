@@ -9,8 +9,8 @@ interface ButtonForLearnProps {
 }
 
 function ButtonForLearn({ innerText, image, path }: ButtonForLearnProps) {
-  return (
-    <Link href={path}>
+   return (
+      <Link href={`/learn${path}`} >
       <button
         type="button"
         className={`rounded-md w-max h-[40px] items-center justify-center text-lg font-semibold text-white bg-[var(--primaryColor)] shadow-[var(--boxShadow)] transition transform duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-[var(--highlightColor)] flex gap-3  px-4 py-2`}
