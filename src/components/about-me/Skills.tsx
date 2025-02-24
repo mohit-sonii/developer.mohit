@@ -8,6 +8,10 @@ const infos = [
       name: 'Postgres SQL'
    },
    {
+      image:'/spring.svg',
+      name:'Java Spring Boot'
+   },
+   {
       image: '/nextjs.svg',
       name: 'Next.js'
    },
