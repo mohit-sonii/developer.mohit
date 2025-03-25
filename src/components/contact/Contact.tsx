@@ -22,11 +22,11 @@ const Contact: React.FC = () => {
     resolver: zodResolver(contactformValidations),
   });
 
-  const handleSubmitRequest = handleSubmit(async (data) => {
+  const handleSubmitRequest = handleSubmit(async (data:any) => {
     const loading_toast = toast.loading("Please wait...");
     startTransition(async () => {
       try {
-        console.log(data);
+        // console.log(data);
         const res = await submission(data);
         if (!res.success) {
           toast.error(res.message);
