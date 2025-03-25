@@ -13,6 +13,7 @@ import { submission } from "./submitAction";
 
 const Contact: React.FC = () => {
   const [isPending, startTransition] = useTransition();
+
   const {
     register,
     handleSubmit,
@@ -26,7 +27,6 @@ const Contact: React.FC = () => {
     const loading_toast = toast.loading("Please wait...");
     startTransition(async () => {
       try {
-        // console.log(data);
         const res = await submission(data);
         if (!res.success) {
           toast.error(res.message);
@@ -68,7 +68,7 @@ const Contact: React.FC = () => {
           />
           <InputField
             register={register}
-            nameForRegister="contact"
+            nameForRegister="contactNumber"
             label_text="Contact"
           />
           <InputField
